@@ -71,52 +71,52 @@ A comparative overview of enterprise Cloud Data Platforms sorted descending by c
 
 Curated list of open-source table formats, query engines, catalogs, and analytics execution frameworks, ranked descending by GitHub community star popularity:
 
-1. **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** [![GitHub stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers)  
+1. **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** [![GitHub_Stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers)  
    ⚡ **Column-oriented database for real-time analytics** (Apache 2.0) — The fastest open-source engine for single-table aggregation, time-series, and log analytics with vectorized execution. Features MergeTree storage engines, advanced data skipping indices, and sub-second execution across billions of records.
 
-2. **[Apache Spark](https://github.com/apache/spark)** [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)  
+2. **[Apache Spark](https://github.com/apache/spark)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)  
    🔥 **Unified analytics engine for large-scale data processing** (Apache 2.0) — The benchmark standard for distributed data pipelines, batch transformations, streaming (Structured Streaming), and machine learning across open lakehouse architectures.
 
-3. **[DuckDB](https://github.com/duckdb/duckdb)** [![GitHub stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers)  
+3. **[DuckDB](https://github.com/duckdb/duckdb)** [![GitHub_Stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers)  
    🦆 **In-process SQL OLAP database management system** (MIT) — The "SQLite for analytics", delivering columnar vectorized execution within application runtimes. Directly reads and queries Apache Iceberg, Delta Lake, and Parquet files in S3 and local storage without infrastructure overhead.
 
-4. **[Apache Doris](https://github.com/apache/doris)** [![GitHub stars](https://img.shields.io/github/stars/apache/doris?style=social&color=white)](https://github.com/apache/doris/stargazers)  
+4. **[Apache Doris](https://github.com/apache/doris)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/doris?style=social&color=white)](https://github.com/apache/doris/stargazers)  
    🚀 **MPP analytical database** (Apache 2.0) — High-concurrency OLAP engine with native MySQL protocol compatibility, real-time update handling via Unique Key upserts, inverted indexing for full-text search, and lakehouse catalog acceleration.
 
-5. **[Trino](https://github.com/trinodb/trino)** [![GitHub stars](https://img.shields.io/github/stars/trinodb/trino?style=social&color=white)](https://github.com/trinodb/trino/stargazers)  
+5. **[Trino](https://github.com/trinodb/trino)** [![GitHub_Stars](https://img.shields.io/github/stars/trinodb/trino?style=social&color=white)](https://github.com/trinodb/trino/stargazers)  
    ⚔️ **Distributed SQL query engine for federated analytics** (Apache 2.0) — The industry standard for querying heterogeneous data sources at massive scale without moving data. Connects natively to Apache Iceberg, Delta Lake, Hive, relational databases, Kafka, and NoSQL stores.
 
-6. **[StarRocks](https://github.com/StarRocks/starrocks)** [![GitHub stars](https://img.shields.io/github/stars/StarRocks/starrocks?style=social&color=white)](https://github.com/StarRocks/starrocks/stargazers)  
+6. **[StarRocks](https://github.com/StarRocks/starrocks)** [![GitHub_Stars](https://img.shields.io/github/stars/StarRocks/starrocks?style=social&color=white)](https://github.com/StarRocks/starrocks/stargazers)  
    ⭐ **Next-gen sub-second OLAP lakehouse engine** (Apache 2.0, Linux Foundation) — High-performance vectorized query engine featuring asynchronous incremental materialized views with automated rewrite, separation of storage and compute, and multi-catalog lake querying (Iceberg, Delta Lake, Hudi, Paimon).
 
-7. **[Apache Arrow DataFusion](https://github.com/apache/arrow-datafusion)** [![GitHub stars](https://img.shields.io/github/stars/apache/arrow-datafusion?style=social&color=white)](https://github.com/apache/arrow-datafusion/stargazers)  
+7. **[Apache Arrow DataFusion](https://github.com/apache/arrow-datafusion)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/arrow-datafusion?style=social&color=white)](https://github.com/apache/arrow-datafusion/stargazers)  
    🏹 **Extensible SQL query engine and execution framework in Rust** (Apache 2.0) — Blazing-fast in-memory columnar query engine utilizing Apache Arrow memory format; powering the next generation of custom data platforms, distributed query engines, and database systems.
 
-8. **[Apache Iceberg](https://github.com/apache/iceberg)** [![GitHub stars](https://img.shields.io/github/stars/apache/iceberg?style=social&color=white)](https://github.com/apache/iceberg/stargazers)  
+8. **[Apache Iceberg](https://github.com/apache/iceberg)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/iceberg?style=social&color=white)](https://github.com/apache/iceberg/stargazers)  
    🧊 **Open table format for huge analytic tables** (Apache 2.0) — The de facto open standard for modern lakehouses with vendor-neutral Apache governance. Delivers full ACID transactions, partition evolution, schema evolution, hidden partitioning, and time-travel querying across engines.
 
-9. **[Delta Lake](https://github.com/delta-io/delta)** [![GitHub stars](https://img.shields.io/github/stars/delta-io/delta?style=social&color=white)](https://github.com/delta-io/delta/stargazers)  
+9. **[Delta Lake](https://github.com/delta-io/delta)** [![GitHub_Stars](https://img.shields.io/github/stars/delta-io/delta?style=social&color=white)](https://github.com/delta-io/delta/stargazers)  
    🔺 **Open-source storage framework for ACID lakehouses** (Apache 2.0) — Storage layer powering lakehouses with transaction logs, schema enforcement, time travel, and UniForm (Universal Format) for cross-format reading across Iceberg and Hudi readers.
 
-10. **[Apache Hudi](https://github.com/apache/hudi)** [![GitHub stars](https://img.shields.io/github/stars/apache/hudi?style=social&color=white)](https://github.com/apache/hudi/stargazers)  
+10. **[Apache Hudi](https://github.com/apache/hudi)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/hudi?style=social&color=white)](https://github.com/apache/hudi/stargazers)  
     🌊 **Transactional data lake platform** (Apache 2.0) — Specialized in streaming ingestion, change data capture (CDC), and record-level mutations with Copy-On-Write and Merge-On-Read storage primitives and built-in indexing.
 
-11. **[Apache Pinot](https://github.com/apache/pinot)** [![GitHub stars](https://img.shields.io/github/stars/apache/pinot?style=social&color=white)](https://github.com/apache/pinot/stargazers)  
+11. **[Apache Pinot](https://github.com/apache/pinot)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/pinot?style=social&color=white)](https://github.com/apache/pinot/stargazers)  
     🍷 **Real-time distributed OLAP datastore** (Apache 2.0) — Designed for low-latency, user-facing real-time analytics at ultra-high throughput (tens of thousands of QPS), indexing streaming data from Kafka/Kinesis and batch data from S3/HDFS.
 
-12. **[Unity Catalog](https://github.com/unitycatalog/unitycatalog)** [![GitHub stars](https://img.shields.io/github/stars/unitycatalog/unitycatalog?style=social&color=white)](https://github.com/unitycatalog/unitycatalog/stargazers)  
+12. **[Unity Catalog](https://github.com/unitycatalog/unitycatalog)** [![GitHub_Stars](https://img.shields.io/github/stars/unitycatalog/unitycatalog?style=social&color=white)](https://github.com/unitycatalog/unitycatalog/stargazers)  
     🌐 **Open universal catalog for data and AI governance** (Apache 2.0) — Provides unified metadata, data access control, credential vending, and governance across tables (Delta, Iceberg), unstructured files, and AI models.
 
-13. **[Apache Gravitino](https://github.com/apache/gravitino)** [![GitHub stars](https://img.shields.io/github/stars/apache/gravitino?style=social&color=white)](https://github.com/apache/gravitino/stargazers)  
+13. **[Apache Gravitino](https://github.com/apache/gravitino)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/gravitino?style=social&color=white)](https://github.com/apache/gravitino/stargazers)  
     🌌 **Federated metadata lakehouse catalog** (Apache 2.0) — Unifies heterogeneous metadata governance across relational databases, open table formats (Iceberg, Hudi), messaging systems (Kafka), and AI assets with centralized security and credential vending.
 
-14. **[Apache Polaris](https://github.com/apache/polaris)** [![GitHub stars](https://img.shields.io/github/stars/apache/polaris?style=social&color=white)](https://github.com/apache/polaris/stargazers)  
+14. **[Apache Polaris](https://github.com/apache/polaris)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/polaris?style=social&color=white)](https://github.com/apache/polaris/stargazers)  
     🧭 **Open-source Iceberg REST catalog** (Apache 2.0) — Neutral, multi-engine catalog based on the Apache Iceberg REST specification. Implements centralized RBAC, credential vending for cloud storage, and catalog federation.
 
-15. **[Apache Nessie](https://github.com/projectnessie/nessie)** [![GitHub stars](https://img.shields.io/github/stars/projectnessie/nessie?style=social&color=white)](https://github.com/projectnessie/nessie/stargazers)  
+15. **[Apache Nessie](https://github.com/projectnessie/nessie)** [![GitHub_Stars](https://img.shields.io/github/stars/projectnessie/nessie?style=social&color=white)](https://github.com/projectnessie/nessie/stargazers)  
     🌿 **Git-like transactional catalog for Iceberg and Delta** (Apache 2.0) — Brings Git concepts (branches, tags, commits, and merges) to data lakehouse catalogs, facilitating isolated dev/stage/prod environments and data experimentation.
 
-16. **[Lakekeeper](https://github.com/lakekeeper/lakekeeper)** [![GitHub stars](https://img.shields.io/github/stars/lakekeeper/lakekeeper?style=social&color=white)](https://github.com/lakekeeper/lakekeeper/stargazers)  
+16. **[Lakekeeper](https://github.com/lakekeeper/lakekeeper)** [![GitHub_Stars](https://img.shields.io/github/stars/lakekeeper/lakekeeper?style=social&color=white)](https://github.com/lakekeeper/lakekeeper/stargazers)  
     🦀 **Rust-native Iceberg REST catalog** (Apache 2.0) — Ultra-lightweight, high-performance catalog implementing the Iceberg REST standard with access control, multi-tenant workspace separation, and low operational footprint.
 
 ---
