@@ -32,147 +32,82 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global Cloud Data Platform market is valued at approximately **$45–50 billion** (expanding at a 17–25% CAGR toward a trillion-dollar cloud ecosystem by 2026+), powered by GenAI workloads, open table formats, and decoupled storage-compute architectures. The sector exhibits **moderate-to-high fragmentation**: while foundational compute and storage are anchored by hyperscaler oligopolies (AWS, Microsoft Azure, Google Cloud) and dominant lakehouse platforms (Databricks, Snowflake), the broader landscape remains intensely fragmented across specialized open formats, federated query engines, metadata catalogs, and regional sovereign clouds.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Databricks Data Intelligence Platform](https://www.databricks.com/)**
-
-  **Lakehouse platform built on Apache Spark**, combining data lake flexibility with warehouse performance. Uses **Delta Lake** (open format, now with UniForm for Iceberg compatibility), **Unity Catalog** for unified governance across tables/volumes/models, and **Photon** vectorized engine . Ranked #1 overall in Futurum's 2026 Data Intelligence Platforms report (92.5), launching Lakebase for sub-second Postgres write-backs . **Pricing**: Consumption-based (DBUs). **Free tier**: Community Edition limited. **Best for**: code-first teams focused on ML and data engineering wanting open lakehouse architecture .
-
-
-
-- **[Snowflake AI Data Cloud](https://www.snowflake.com/)**
-
-  **Cloud-native data warehouse** with separation of storage, compute, and services. Ranked Elite status (91.9) in Futurum 2026, having **open-sourced Polaris Catalog for Apache Iceberg** and launched native Snowflake Postgres . Supports Iceberg tables and cross-cloud data sharing without copying . **Pricing**: Consumption-based (Snowflake credits). **Free tier**: Trial credits. **Best for**: teams wanting fully managed simplicity with multi-cloud flexibility and minimal operational overhead .
-
-
-
-- **[Google Cloud BigQuery](https://cloud.google.com/bigquery)**
-
-  **Fully serverless data warehouse** on Google Cloud with zero infrastructure management. **BigQuery ML** for building models in SQL; **BI Engine** for sub-second dashboards; real-time streaming ingestion . **Pricing**: On-demand and capacity-based options. **Free tier**: Limited. **Best for**: Google Cloud organizations wanting a truly serverless platform with no cluster management .
-
-
-
-- **[AWS Redshift](https://aws.amazon.com/redshift/)**
-
-  **Cloud data warehouse** deeply integrated with AWS ecosystem (S3, Glue, SageMaker, Kinesis). **Redshift Spectrum** queries S3 directly; **AQUA** accelerates large scans; supports Apache Iceberg read/write . **Pricing**: Provisioned or Serverless. **Free tier**: AWS Free Tier applies. **Best for**: AWS-centric organizations wanting deep native integration .
-
-
-
-- **[Microsoft Fabric](https://www.microsoft.com/fabric)**
-
-  **Unified data platform** built on OneLake, combining data integration, analytics, and Power BI. **Fabric Databases (GA)** and **Cosmos DB in Fabric (preview)** enable zero-ETL operational-to-analytical flows . Ranked Elite (90.4) in Futurum 2026 despite optimistic-concurrency write bottlenecks across OneLake . **Pricing**: Capacity-based (CUs). **Free tier**: Trial available. **Best for**: Microsoft-centric organizations with existing Power BI and Azure identity investments .
-
-
-
-- **[Dremio](https://www.dremio.com/)**
-
-  **Open data lakehouse platform** with SQL query engine built on Apache Arrow, querying data directly on S3/lakes without separate warehouse. **Arctic** provides Git-like Iceberg catalog management . **Pricing**: Quote-only. **Free tier**: Trial available. **Best for**: teams wanting lakehouse analytics without data duplication into a warehouse.
-
-
-
-- **[SingleStore](https://www.singlestore.com/)**
-
-  **Real-time distributed SQL database** for operational analytics, combining transactions and analytics in one engine. **Pricing**: Quote-only; free Starter Workspace. **Free tier**: Yes. **Best for**: workloads needing sub-second analytics on fresh operational data.
-
-
-
-- **[Teradata VantageCloud](https://www.teradata.com/)**
-
-  **Enterprise data warehouse** with cloud-native architecture and AI/ML integration. **Pricing**: Quote-only. **Free tier**: None. **Best for**: large enterprises with existing Teradata investments migrating to cloud.
-
-
-
-- **[Oracle Autonomous Data Warehouse](https://www.oracle.com/autonomous-database/)**
-
-  **Self-driving cloud data warehouse** with automated tuning, patching, and scaling. **Pricing**: Consumption-based (OCPUs). **Free tier**: Limited Always Free tier. **Best for**: Oracle-centric enterprises wanting minimal DBA overhead.
-
-
-
-- **[Cloudera Data Platform](https://www.cloudera.com/)**
-
-  **Hybrid data platform** with shared data experience (SDX) across on-premises and cloud. **Pricing**: Quote-only. **Free tier**: None. **Best for**: organizations with existing Hadoop/Cloudera investments needing hybrid deployment.
-
-
+| Platform | Company Valuation / Revenue Size | Starting Pricing | Free Tier / Trial Limit | Best For / Key Differentiators |
+|:---|:---|:---|:---|:---|
+| **[Microsoft Fabric](https://www.microsoft.com/fabric)** | ~$3.88 Trillion (Public Market Cap) | Starting at **$0.18/CU-hour** (Pay-as-you-go F2 tier, ~$262/month; 1-year reserved from ~$154/month) + OneLake storage ($0.023/GB/mo) | **60-day free trial** with access to high-capacity trial SKUs (e.g., F64 equivalent) and 1 TB OneLake storage | Microsoft-centric enterprise ecosystems with heavy Power BI investments seeking unified OneLake SaaS governance. |
+| **[Google Cloud BigQuery](https://cloud.google.com/bigquery)** | ~$3.46 Trillion (Alphabet Public Market Cap) | **$6.25 per TiB** scanned (on-demand query pricing); active storage at **$0.020 per GiB/month** | **Always Free Tier**: 1 TiB of query data processed per month and 10 GiB of active storage per month; plus **$300 credit 90-day GCP trial** | Serverless SQL analytics with zero cluster management, integrated BigQuery ML, and BI Engine acceleration. |
+| **[AWS Redshift](https://aws.amazon.com/redshift/)** | ~$2.59 Trillion (Amazon Public Market Cap) | Provisioned instances starting at **$0.543/hour** (`dc2.large`); Redshift Serverless starting at **$0.375/RPU-hour** (~$1.50/hour for minimum 4 RPUs) | **$300 credit 90-day trial** for Redshift Serverless; or **2-month free trial** of provisioned `dc2.large` (up to 750 hours/month) | AWS-native ecosystems requiring tight integration with S3, AWS Glue, SageMaker, and Redshift Spectrum. |
+| **[Oracle Autonomous Data Warehouse](https://www.oracle.com/autonomous-database/)** | ~$360–430 Billion (Public Market Cap) | Starting at **$0.336 per ECPU/hour** (License Included, min 2 ECPUs = $0.672/hour); BYOL starts at **$0.0807 per ECPU/hour** | **Always Free Tier**: 2 Autonomous Database instances with 1 OCPU / 20 GB storage each; plus **$300 credit 30-day OCI trial** | Oracle shops seeking automated self-tuning, automated patching, zero-maintenance operational lakehouse analytics. |
+| **[Databricks Data Intelligence Platform](https://www.databricks.com/)** | ~$190 Billion (Private Valuation) | Serverless / Jobs compute starting at **~$0.07 to $0.15/DBU**; standard compute at **$0.20–$0.40/DBU** (plus underlying cloud VM infrastructure) | **Databricks Free Edition** (forever free serverless environment with daily quota for learning/prototyping); plus **14-day trial with $400 in trial credits** | Code-first engineering and data science teams using Apache Spark, Delta Lake (UniForm), and Unity Catalog. |
+| **[Snowflake AI Data Cloud](https://www.snowflake.com/)** | ~$110–115 Billion (Public Market Cap) | Standard Edition starting at **$2.00 per Snowflake Credit** (on-demand compute); cloud storage from **$23/TB/month** | **30-day free trial with $400 in trial credits** (no credit card required upfront) | Fully managed SQL lakehouse/warehouse simplicity, multi-cloud data sharing, and Apache Iceberg (Polaris) support. |
+| **[Cloudera Data Platform](https://www.cloudera.com/)** | ~$5.3 Billion (Private Equity Buyout Valuation) | Starting at **$0.04/CCU-hour** (Data Hub) to **$0.07/CCU-hour** (Data Warehouse / Engineering Core rate; all-purpose at $0.20/CCU-hr) | **60-day cloud trial** available via direct Cloudera tenant registration; no self-service always-free tier | Hybrid enterprise architectures with legacy Hadoop/Cloudera estates transitioning to public/private clouds via SDX. |
+| **[Teradata VantageCloud](https://www.teradata.com/)** | ~$3.2 Billion (Public Market Cap) | VantageCloud Lake on AWS starting from software usage contracts + AWS compute (~$0.50–$2.00+/node-hr depending on shape) | **Teradata VantageCloud Developer Edition** on AWS Marketplace (free software license up to 2 nodes, pay only EC2/EBS infrastructure costs) | Large-scale enterprises with heavy historical on-premises Teradata migrations requiring high-concurrency complex SQL. |
+| **[Dremio](https://www.dremio.com/)** | ~$2.0 Billion (Private Valuation) | Dremio Cloud Standard starting at **$0.20 per DCU** (Dremio Compute Unit, time-based consumption) | **Forever-free Standard tier** (restricted to Small engines and limited users/tables); plus **30-day trial with $400 in trial credits** | Lakehouse query federation on Apache Arrow and direct querying over Amazon S3/ADLS without data duplication. |
+| **[SingleStore](https://www.singlestore.com/)** | ~$1.0–1.3 Billion (Private Valuation) | Standard Edition dedicated workspaces starting at **$0.99/hour** (`S-00` tier: 2 vCPU, 16 GB RAM at 0.25 credits/hr; $3.96/credit) | **Always Free Shared Tier** (Helios Shared Edition for developer testing/prototyping); plus **free trial credits** on Standard Edition | Sub-second operational analytics and real-time HTAP ingestion combining transactional and analytical workloads. |
 
 ## Open-Source GitHub Projects
 
+Curated list of open-source table formats, query engines, catalogs, and analytics execution frameworks, ranked by GitHub community stars:
 
+1. **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** [![GitHub stars](https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white)](https://github.com/ClickHouse/ClickHouse/stargazers)  
+   **Column-oriented database for real-time analytics** (Apache 2.0) — The fastest open-source engine for single-table aggregation, time-series, and log analytics with vectorized execution. Features MergeTree storage engines, advanced data skipping indices, and sub-second execution across billions of records.
 
-- **[Apache Iceberg](https://github.com/apache/iceberg)**
+2. **[Apache Spark](https://github.com/apache/spark)** [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers)  
+   **Unified analytics engine for large-scale data processing** (Apache 2.0) — The benchmark standard for distributed data pipelines, batch transformations, streaming (Structured Streaming), and machine learning across open lakehouse architectures.
 
-  **Open table format for huge analytic tables** (Apache 2.0) — **the de facto standard for open lakehouse storage**, with the broadest multi-engine support and neutral Apache governance . **Features**: Hidden partitioning and partition evolution; snapshot isolation with ACID; schema evolution; time travel; supports Parquet, ORC, Avro. Industry momentum: Databricks acquired Tabular (Iceberg creators), AWS shipped S3 Tables, Snowflake open-sourced Polaris . **Tech stack**: Java. **Deploy**: Integrated with compute engines; catalogs provided separately. **Trade-off**: **Table format only**—needs catalog (Polaris/Nessie) and storage (S3/MinIO). **Best for**: organizations building vendor-neutral lakehouses where multiple engines must access the same tables simultaneously.
+3. **[DuckDB](https://github.com/duckdb/duckdb)** [![GitHub stars](https://img.shields.io/github/stars/duckdb/duckdb?style=social&color=white)](https://github.com/duckdb/duckdb/stargazers)  
+   **In-process SQL OLAP database management system** (MIT) — The "SQLite for analytics", delivering columnar vectorized execution within application runtimes. Directly reads and queries Apache Iceberg, Delta Lake, and Parquet files in S3 and local storage without infrastructure overhead.
 
+4. **[Apache Doris](https://github.com/apache/doris)** [![GitHub stars](https://img.shields.io/github/stars/apache/doris?style=social&color=white)](https://github.com/apache/doris/stargazers)  
+   **MPP analytical database** (Apache 2.0) — High-concurrency OLAP engine with native MySQL protocol compatibility, real-time update handling via Unique Key upserts, inverted indexing for full-text search, and lakehouse catalog acceleration.
 
+5. **[Trino](https://github.com/trinodb/trino)** [![GitHub stars](https://img.shields.io/github/stars/trinodb/trino?style=social&color=white)](https://github.com/trinodb/trino/stargazers)  
+   **Distributed SQL query engine for federated analytics** (Apache 2.0) — The industry standard for querying heterogeneous data sources at massive scale without moving data. Connects natively to Apache Iceberg, Delta Lake, Hive, relational databases, Kafka, and NoSQL stores.
 
-- **[StarRocks](https://github.com/StarRocks/starrocks)**
+6. **[StarRocks](https://github.com/StarRocks/starrocks)** [![GitHub stars](https://img.shields.io/github/stars/StarRocks/starrocks?style=social&color=white)](https://github.com/StarRocks/starrocks/stargazers)  
+   **Next-gen sub-second OLAP lakehouse engine** (Apache 2.0, Linux Foundation) — High-performance vectorized query engine featuring asynchronous incremental materialized views with automated rewrite, separation of storage and compute, and multi-catalog lake querying (Iceberg, Delta Lake, Hudi, Paimon).
 
-  **High-performance OLAP database with lakehouse acceleration** (Apache 2.0, Linux Foundation) — **the most mature open-source option for accelerating BI queries on lake data** . **Features**: **Multi-Catalog** reads Iceberg/Hudi/Delta/Paimon directly without data movement; **asynchronous incremental materialized views** with automatic query rewrite; **MySQL protocol** for BI tool compatibility; **vectorized + CBO + Runtime Filter** for performance; **separation of storage and compute** (v3.0+) . **Tech stack**: C++, Java. **Deploy**: Self-hosted (Kubernetes, Docker) or cloud. **Trade-off**: **Acceleration layer, not source of truth**—materialized views are copies; lake remains authoritative. Larger learning curve than ClickHouse for simple deployments. **Best for**: teams with lakehouse architecture needing sub-second BI performance (p95 < 1s) and high concurrency (>100 QPS) .
+7. **[Apache Arrow DataFusion](https://github.com/apache/arrow-datafusion)** [![GitHub stars](https://img.shields.io/github/stars/apache/arrow-datafusion?style=social&color=white)](https://github.com/apache/arrow-datafusion/stargazers)  
+   **Extensible SQL query engine and execution framework written in Rust** (Apache 2.0) — Blazing-fast in-memory columnar query engine utilizing Apache Arrow memory format; powering the next generation of custom data platforms, distributed query engines, and database systems.
 
+8. **[Apache Iceberg](https://github.com/apache/iceberg)** [![GitHub stars](https://img.shields.io/github/stars/apache/iceberg?style=social&color=white)](https://github.com/apache/iceberg/stargazers)  
+   **Open table format for huge analytic tables** (Apache 2.0) — The de facto open standard for modern lakehouses with vendor-neutral Apache governance. Delivers full ACID transactions, partition evolution, schema evolution, hidden partitioning, and time-travel querying across engines.
 
+9. **[Delta Lake](https://github.com/delta-io/delta)** [![GitHub stars](https://img.shields.io/github/stars/delta-io/delta?style=social&color=white)](https://github.com/delta-io/delta/stargazers)  
+   **Open-source storage framework for ACID lakehouses** (Apache 2.0) — Storage layer powering lakehouses with transaction logs, schema enforcement, time travel, and UniForm (Universal Format) for cross-format reading across Iceberg and Hudi readers.
 
-- **[Trino](https://github.com/trinodb/trino)**
+10. **[Apache Hudi](https://github.com/apache/hudi)** [![GitHub stars](https://img.shields.io/github/stars/apache/hudi?style=social&color=white)](https://github.com/apache/hudi/stargazers)  
+    **Transactional data lake platform** (Apache 2.0) — Specialized in streaming ingestion, change data capture (CDC), and record-level mutations with Copy-On-Write and Merge-On-Read storage primitives and built-in indexing.
 
-  **Distributed SQL query engine for federated analytics** (Apache 2.0) — **the standard for querying across heterogeneous data sources without moving data** . **Features**: Connector architecture queries HDFS, Hive, Kafka, MySQL, PostgreSQL, Iceberg, Delta, and more; no storage of its own—purely a query layer; massively parallel processing; used by Datto for Iceberg analytics achieving 2–3× query speedup . **Tech stack**: Java. **Deploy**: Self-hosted (Kubernetes, bare metal). **Trade-off**: **Query engine only**—no storage, no catalog management, no materialized views. **Best for**: organizations with data scattered across multiple systems needing a unified SQL query interface—especially those with existing Iceberg lakes .
+11. **[Apache Pinot](https://github.com/apache/pinot)** [![GitHub stars](https://img.shields.io/github/stars/apache/pinot?style=social&color=white)](https://github.com/apache/pinot/stargazers)  
+    **Real-time distributed OLAP datastore** (Apache 2.0) — Designed for low-latency, user-facing real-time analytics at ultra-high throughput (tens of thousands of QPS), indexing streaming data from Kafka/Kinesis and batch data from S3/HDFS.
 
+12. **[Unity Catalog](https://github.com/unitycatalog/unitycatalog)** [![GitHub stars](https://img.shields.io/github/stars/unitycatalog/unitycatalog?style=social&color=white)](https://github.com/unitycatalog/unitycatalog/stargazers)  
+    **Open universal catalog for data and AI governance** (Apache 2.0) — Provides unified metadata, data access control, credential vending, and governance across tables (Delta, Iceberg), unstructured files, and AI models.
 
+13. **[Apache Gravitino](https://github.com/apache/gravitino)** [![GitHub stars](https://img.shields.io/github/stars/apache/gravitino?style=social&color=white)](https://github.com/apache/gravitino/stargazers)  
+    **Federated metadata lakehouse catalog** (Apache 2.0) — Unifies heterogeneous metadata governance across relational databases, open table formats (Iceberg, Hudi), messaging systems (Kafka), and AI assets with centralized security and credential vending.
 
-- **[Apache Doris](https://github.com/apache/doris)**
+14. **[Apache Polaris](https://github.com/apache/polaris)** [![GitHub stars](https://img.shields.io/github/stars/apache/polaris?style=social&color=white)](https://github.com/apache/polaris/stargazers)  
+    **Open-source Iceberg REST catalog** (Apache 2.0) — Neutral, multi-engine catalog based on the Apache Iceberg REST specification. Implements centralized RBAC, credential vending for cloud storage, and catalog federation.
 
-  **MPP analytical database** (Apache 2.0) — **the full-featured open-source OLAP engine** with strong real-time update support and MySQL compatibility . **Features**: **Unique Key model** for upserts and row-level updates; **high-concurrency point queries** (thousands QPS); automatic load balancing and replication; Hive/Iceberg catalog support; active Apache community . **Tech stack**: C++, Java. **Deploy**: Self-hosted. **Trade-off**: **Lake integration less mature than StarRocks**; not designed for extreme single-table aggregation like ClickHouse. **Best for**: enterprise reporting and ad-hoc analytics needing both high concurrency and real-time updates, especially in MySQL-centric environments .
+15. **[Apache Nessie](https://github.com/projectnessie/nessie)** [![GitHub stars](https://img.shields.io/github/stars/projectnessie/nessie?style=social&color=white)](https://github.com/projectnessie/nessie/stargazers)  
+    **Git-like transactional catalog for Iceberg and Delta** (Apache 2.0) — Brings Git concepts (branches, tags, commits, and merges) to data lakehouse catalogs, facilitating isolated dev/stage/prod environments and data experimentation.
 
-
-
-- **[ClickHouse](https://github.com/ClickHouse/ClickHouse)**
-
-  **Column-oriented database for real-time analytics** (Apache 2.0) — **the fastest engine for single-table aggregation and log analytics** . **Features**: **MergeTree engine family** with rich indexing and partitioning; vectorized execution; excellent for logs, time-series, and wide-table aggregations; single-node can handle billions of rows with second-level queries . **Tech stack**: C++. **Deploy**: Self-hosted or ClickHouse Cloud. **Trade-off**: **Weak JOIN performance**; **not suitable for high-frequency updates** (ReplacingMergeTree deduplicates but doesn't guarantee real-time visibility); **lake integration weaker** than StarRocks/Doris . **Best for**: log analysis, user behavior analytics, and read-heavy single-table aggregation where JOINs are minimal.
-
-
-
-- **[Apache Polaris](https://github.com/apache/polaris)**
-
-  **Open-source Iceberg catalog** (Apache 2.0, Apache TLP February 2026) — **the open-source foundation of Snowflake's Open Catalog offering** . **Features**: **Pure Iceberg REST specification**; **RBAC** with principals, roles, and privileges; **credential vending** for scoped short-lived access; **catalog federation** to front existing Hive Metastore or other catalogs . **Tech stack**: Java. **Deploy**: Self-hosted. **Trade-off**: **Iceberg-only**—no support for models, volumes, or vectors as first-class citizens. **Best for**: teams wanting a clean, foundation-governed Iceberg catalog with federation for gradual migration from Hive .
-
-
-
-- **[Apache Gravitino](https://github.com/apache/gravitino)**
-
-  **Federated metadata lake catalog** (Apache 2.0, Apache TLP 2025) — **the most ambitious open-source catalog for heterogeneous metadata** . **Features**: **Federates metadata across Hive, Iceberg, Hudi, Kafka, and relational databases**; unified API; credential vending; access control; nascent lineage and MCP support . **Tech stack**: Java. **Deploy**: Self-hosted. **Trade-off**: **Documentation incomplete and confusing**, making implementation challenging ; no first-class model/vector support like Unity Catalog. **Best for**: organizations with multiple existing catalogs needing a federated metadata layer without migrating everything to one format .
-
-
-
-- **[Lakekeeper](https://github.com/lakekeeper/lakekeeper)**
-
-  **Lightweight Iceberg REST catalog in Rust** (Apache 2.0) — **the easiest open-source catalog to deploy and evaluate** . **Features**: **Rust-based** for performance and low resource usage; **pure Iceberg REST**; access control; credential vending; **excellent documentation and working Docker playground** . **Tech stack**: Rust. **Deploy**: Self-hosted (Docker). **Trade-off**: **Iceberg-only**; no broader entity support (models, volumes); smaller community than Polaris or Gravitino. **Best for**: teams wanting a simple, well-documented Iceberg catalog with minimal operational overhead—especially those new to open lakehouse architecture .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Apache Hudi** — Open data lake platform with upserts and incremental processing (Apache 2.0). **Note**: Strong for CDC and streaming upserts (Uber, Robinhood use cases) but proved less efficient for bulk loading in benchmarks compared to Delta/Iceberg . **Best for**: streaming-heavy ingestion with record-level mutations.
-
-- **Delta Lake** — Open table format from Databricks (Apache 2.0). **Note**: Fastest for bulk loading in benchmarks; strongest when Spark is the primary engine . **Best for**: Spark-centric teams already in Databricks ecosystem.
-
-- **Apache Nessie** — Git-like catalog for Iceberg (Apache 2.0). **Note**: Catalog-level branching and tagging for data versioning; not focused on multi-modal assets . **Best for**: teams needing Git-flow for data with dev/stage/prod isolation.
-
-
-
-**Frameworks for building custom systems**: Combine **MinIO** or S3 for storage with **Apache Iceberg** as the table format, **Apache Polaris** or **Lakekeeper** as the catalog, and **StarRocks** or **Trino** for query—creating a fully open-source lakehouse. **None of these match Databricks' unified experience or Snowflake's managed simplicity**, but for teams prioritizing vendor independence and cost control, the open stack is production-viable.
-
-
+16. **[Lakekeeper](https://github.com/lakekeeper/lakekeeper)** [![GitHub stars](https://img.shields.io/github/stars/lakekeeper/lakekeeper?style=social&color=white)](https://github.com/lakekeeper/lakekeeper/stargazers)  
+    **Rust-native Iceberg REST catalog** (Apache 2.0) — Ultra-lightweight, high-performance catalog implementing the Iceberg REST standard with access control, multi-tenant workspace separation, and low operational footprint.
 
 ## How to Contribute
 
